@@ -66,15 +66,25 @@
       document.getElementById("suit2").innerHTML = card2
       document.getElementById("suit3").innerHTML = card3
       document.getElementById("suit4").innerHTML = card4
-
-
-
-      //Part Two (Samuel Horton)
-
-
-
-
-
     </script>
+
+    <!--Part Two (Samuel Horton)-->
+    <h3>Guess a number, 0-9</h3>
+    <input type="text" name="number" id="inp">
+    <button type="button" onclick="guessNumber()">Submit guess</button>
+    <p id="output"></p>
+
+    <script type="text/javascript">
+      const num = Math.floor(Math.random()*10);
+      function guessNumber(){
+        if (document.getElementById("inp").value == num) {
+          document.getElementById("output").innerHTML = "Yes";
+        }
+        else {
+          document.getElementById("output").innerHTML = "No";
+        }
+      }
+    </script>
+
   </body>
 </html>
